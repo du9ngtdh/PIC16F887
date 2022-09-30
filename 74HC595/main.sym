@@ -1,0 +1,83 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     send_74hc595_pin_data
+021     ck_74hc595_pin
+022     update_74hc595
+023-026 ___ic_value
+027     MAIN.LEDA
+028     MAIN.LEDB
+029     MAIN.mode
+02A     @delay_ms1.P1
+02A     OUTPUT_to_4_74HC595.value
+02B     OUTPUT_to_4_74HC595.ic
+02C     ___send_byte_to_ic.value
+02C     OUTPUT_to_4_74HC595.@SCRATCH1
+02D     ___send_byte_to_ic.buffer
+02D     OUTPUT_to_4_74HC595.@SCRATCH2
+02E     ___send_byte_to_ic.i
+02F     ___send_bit_to_ic.value
+02F     ___send_byte_to_ic.@SCRATCH1
+030     @WRITEBITA.P1
+031     @WRITEBITA.P1
+032-033 @WRITEBITA.P1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @WRITEBITA
+000024  ___send_bit_to_ic
+000063  ___send_byte_to_ic
+00007C  OUTPUT_to_4_74HC595
+00008F  ___upload_value_ic
+0000B9  @delay_ms1
+0000CD  @cinit1
+0000CD  MAIN
+0000E5  @cinit2
+
+Project Directory:
+    C:\Users\du9ng\StudioProjects\PIC16F887\74HC595\
+
+Project Files:
+    main.c                                                  [30-Sep-22 16:48  CRC=51F78337]
+    main.h                                                  [30-Sep-22 14:54  CRC=64D0046D]
+    ..\..\..\..\..\Program Files (x86)\PICC\Devices\16F887.h [18-Apr-14 16:56  CRC=42D047B0]
+    my_74hc595.h                                            [30-Sep-22 16:07  CRC=0A1EF1C0]
+
+Source signature=0DD5B2D4
+
+Units:
+    main (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-65535
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   main.xsym
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX8:       main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.ccspjt
+    Call Tree:   main.tre
+    Statistics:  main.STA

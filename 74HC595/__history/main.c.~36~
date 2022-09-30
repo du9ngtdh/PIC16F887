@@ -1,0 +1,23 @@
+#include <main.h>
+#include "my_74hc595.h"
+
+void main()
+{
+   
+   set_tris_d(~0x07);
+   char LEDA = 0xff;
+   char LEDB = 0xff;
+
+   while(TRUE)
+   {
+      OUTPUT_to_4_74HC595(LEDA,1);
+      OUTPUT_to_4_74HC595(LEDB,2);
+      delay_ms(100);
+      OUTPUT_to_4_74HC595(LEDA,1);    
+      OUTPUT_to_4_74HC595(LEDB,2); 
+      delay_ms(100);
+      LEDB<<=1;
+      LEDA<<=1;
+   }
+
+}

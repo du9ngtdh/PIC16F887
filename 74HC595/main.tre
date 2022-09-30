@@ -1,0 +1,37 @@
+ÀÄmain
+   ÀÄMAIN  0/137  Ram=0
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄOUTPUT_to_4_74HC595  0/61  Ram=4
+      ³  ÃÄ___send_byte_to_ic  0/25  Ram=3
+      ³  ³  ÃÄ___send_bit_to_ic  0/63  Ram=1
+      ³  ³  ³  ÃÄ@WRITEBITA  0/32  Ram=6
+      ³  ³  ³  ÃÄ@WRITEBITA  0/32  Ram=6
+      ³  ³  ³  ÃÄ@WRITEBITA  0/32  Ram=6
+      ³  ³  ³  ÃÄ@WRITEBITA  0/32  Ram=6
+      ³  ³  ³  ÃÄ@WRITEBITA  0/32  Ram=6
+      ³  ³  ³  ÃÄ@WRITEBITA  0/32  Ram=6
+      ³  ³  ³  ÃÄ@WRITEBITA  0/32  Ram=6
+      ³  ³  ³  ÀÄ@WRITEBITA  0/32  Ram=6
+      ³  ³  ÀÄ___send_bit_to_ic  0/63  Ram=1
+      ³  ³     ÀÄ*
+      ³  ÃÄ___send_byte_to_ic  0/25  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄ___send_byte_to_ic  0/25  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄ___send_byte_to_ic  0/25  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÀÄ___upload_value_ic  (Inline)  Ram=0
+      ³     ÃÄ@WRITEBITA  0/32  Ram=6
+      ³     ÃÄ@WRITEBITA  0/32  Ram=6
+      ³     ÃÄ@WRITEBITA  0/32  Ram=6
+      ³     ÃÄ@WRITEBITA  0/32  Ram=6
+      ³     ÃÄ@WRITEBITA  0/32  Ram=6
+      ³     ÀÄ@WRITEBITA  0/32  Ram=6
+      ÃÄOUTPUT_to_4_74HC595  0/61  Ram=4
+      ³  ÀÄ*
+      ÃÄ@delay_ms1  0/20  Ram=1
+      ÃÄOUTPUT_to_4_74HC595  0/61  Ram=4
+      ³  ÀÄ*
+      ÃÄOUTPUT_to_4_74HC595  0/61  Ram=4
+      ³  ÀÄ*
+      ÀÄ@delay_ms1  0/20  Ram=1

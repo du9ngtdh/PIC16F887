@@ -1,0 +1,52 @@
+[PROJECT]
+Target=main.hex
+Processor_Text=PIC16F887
+CCSVerions=5.025
+Compiler=PCM
+CCSVersion=5.025
+[Target Data]
+FileList=main.c
+[Directories]
+Include=
+[C:\Users\du9ng\StudioProjects\PIC16F887\74HC595\main]
+Type=4
+[mru-list]
+1=main.c
+
+[ProjectLog]
+Days=1
+D1=30-09-2022
+D1_L=13
+D1_L1=[53689]Project Opened.
+D1_L2=[53791]Started Editing.
+D1_L3=[54255]Stopped Editing.
+D1_L4=[54308]Project Opened.
+D1_L5=[54760]Started Editing.
+D1_L6=[55821]Stopped Editing.
+D1_L7=[55967]Started Editing.
+D1_L8=[56282]Stopped Editing.
+D1_L9=[56536]Started Editing.
+D1_L10=[58683]Stopped Editing.
+D1_L11=[59217]Started Editing.
+D1_L12=[60601]Stopped Editing.
+TotalEdit=67
+TotalDebug=0
+D1_E=67
+D1_D=0
+D1_L13=[60601]Project Closed.
+
+[Opened Files]
+1=main.c
+2=my_74hc595.h
+3=main.h
+4=
+[main.c]
+Type=4
+
+[ExtraIncludes]
+Count=1
+1=main=c:\users\du9ng\studioprojects\pic16f887\74hc595\my_74hc595.h
+2=main=c:\users\du9ng\studioprojects\pic16f887\74hc595\my_74hc595.h
+[Units]
+Count=1
+1=main (main)

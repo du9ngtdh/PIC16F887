@@ -1,16 +1,16 @@
-#include "stdio.h"
+
 // this function send one bit to ic
-void ___send_bit_to_ic(int value)
+void ___send_bit_to_ic(int1 value)
 {
     //write code send one bit to ic here
-    printf("%d", value);
+    output_bit(send_74hc595_pin,value);
 }
 
 // this function updates all bits of ic
 void ___upload_value_ic()
 {
     //write code upload value to ic here
-    printf("\n");
+  
 }
 // this function send 1byte to ic
 void ___send_byte_to_ic(char value)

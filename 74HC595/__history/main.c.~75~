@@ -2,7 +2,8 @@
 #include "my_74hc595.h"
 
 void main()
-{ 
+{
+   
    set_tris_d(~0x07);
    char LEDA = 0xff;
    char LEDB = 0xff;
@@ -44,21 +45,15 @@ void main()
       {
       LEDA<<=1;
       LEDB>>=1;
-      if(LEDA == LEDB&& LEDB == 0)
+      if(LEDA == LEDB&& LEDB == 0xff)
          {
             mode = 3;
          }
       }
       if(mode == 3)
       {
-      
-         LEDA = ~LEDA;
-         LEDB = ~LEDB;
-         LEDA>>=1;
-         LEDB<<=1;
-         LEDA = ~LEDA;
-         LEDB = ~LEDB;
-      
+      LEDA<<=1;
+      LEDB>>=1;
       if(LEDA == LEDB&& LEDB == 0xff)
          {
             mode = 0;
