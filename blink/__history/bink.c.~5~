@@ -1,0 +1,11 @@
+#include <bink.h>
+
+void main()
+{
+   SET_TRIS_D(0x00);
+   while(TRUE)
+   {
+      
+   }
+
+}

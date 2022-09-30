@@ -1,0 +1,14 @@
+#include <bink.h>
+
+void main()
+{
+   SET_TRIS_D(0x00);
+   while(TRUE)
+   {
+      output_d(3);
+      delay_ms(500);
+      output_d(0);   
+      delay_ms(500);
+   }
+
+}

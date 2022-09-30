@@ -1,0 +1,16 @@
+#include <bink.h>
+
+void main()
+{
+   SET_TRIS_D(^0x01);
+   while(TRUE)
+   {
+      output_bit(pin_d0,1);
+      output_bit(pin_d1,1);
+      delay_ms(1000);
+      output_bit(pin_d0,0);
+      output_bit(pin_d1,0);
+      delay_ms(1000);
+   }
+
+}

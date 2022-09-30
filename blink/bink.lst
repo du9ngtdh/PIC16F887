@@ -1,0 +1,126 @@
+CCS PCM C Compiler, Version 5.025, 39025               27-Sep-22 17:04
+
+               Filename:   C:\Users\du9ng\Desktop\PIC16F887\blink\bink.lst
+
+               ROM used:   72 words (1%)
+                           Largest free fragment is 2048
+               RAM used:   6 (2%) at main() level
+                           7 (2%) worst case
+               Stack used: 1 locations
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   018
+0003:  NOP
+.................... #include <bink.h> 
+.................... #include <16F887.h> 
+.................... //////////// Standard Header file for the PIC16F887 device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2013 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC16F887 
+....................  
+.................... #list 
+....................  
+.................... #device ADC=16 
+....................  
+.................... #FUSES NOWDT                 	//No Watch Dog Timer 
+.................... #FUSES NOBROWNOUT            	//No brownout reset 
+.................... #FUSES NOLVP                 	//No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O 
+....................  
+.................... #use delay(crystal=20000000) 
+0004:  MOVLW  22
+0005:  MOVWF  04
+0006:  BCF    03.7
+0007:  MOVF   00,W
+0008:  BTFSC  03.2
+0009:  GOTO   017
+000A:  MOVLW  06
+000B:  MOVWF  78
+000C:  CLRF   77
+000D:  DECFSZ 77,F
+000E:  GOTO   00D
+000F:  DECFSZ 78,F
+0010:  GOTO   00C
+0011:  MOVLW  7B
+0012:  MOVWF  77
+0013:  DECFSZ 77,F
+0014:  GOTO   013
+0015:  DECFSZ 00,F
+0016:  GOTO   00A
+0017:  RETURN
+....................  
+....................  
+....................  
+.................... void main() 
+0018:  MOVF   03,W
+0019:  ANDLW  1F
+001A:  MOVWF  03
+001B:  BSF    03.5
+001C:  BSF    03.6
+001D:  MOVF   09,W
+001E:  ANDLW  C0
+001F:  MOVWF  09
+0020:  BCF    03.6
+0021:  BCF    1F.4
+0022:  BCF    1F.5
+0023:  MOVLW  00
+0024:  BSF    03.6
+0025:  MOVWF  08
+0026:  BCF    03.5
+0027:  CLRF   07
+0028:  CLRF   08
+0029:  CLRF   09
+002A:  BCF    03.7
+.................... { 
+....................    SET_TRIS_D(0x00); 
+002B:  MOVLW  00
+002C:  BSF    03.5
+002D:  BCF    03.6
+002E:  MOVWF  08
+....................    while(TRUE) 
+....................    { 
+....................       output_d(3); 
+002F:  CLRF   08
+0030:  MOVLW  03
+0031:  BCF    03.5
+0032:  MOVWF  08
+....................       delay_ms(500); 
+0033:  MOVLW  02
+0034:  MOVWF  21
+0035:  MOVLW  FA
+0036:  MOVWF  22
+0037:  CALL   004
+0038:  DECFSZ 21,F
+0039:  GOTO   035
+....................       output_d(0);    
+003A:  BSF    03.5
+003B:  CLRF   08
+003C:  BCF    03.5
+003D:  CLRF   08
+....................       delay_ms(500); 
+003E:  MOVLW  02
+003F:  MOVWF  21
+0040:  MOVLW  FA
+0041:  MOVWF  22
+0042:  CALL   004
+0043:  DECFSZ 21,F
+0044:  GOTO   040
+0045:  BSF    03.5
+0046:  GOTO   02F
+....................    } 
+....................  
+.................... } 
+0047:  SLEEP
+
+Configuration Fuses:
+   Word  1: 2CE2   HS NOWDT PUT MCLR NOPROTECT NOCPD NOBROWNOUT IESO FCMEN NOLVP NODEBUG
+   Word  2: 3FFF   BORV40 NOWRT

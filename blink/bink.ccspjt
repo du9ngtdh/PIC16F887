@@ -1,0 +1,60 @@
+[PROJECT]
+Target=bink.hex
+Processor_Text=PIC16F887
+CCSVerions=5.025
+Compiler=PCM
+CCSVersion=5.025
+[Target Data]
+FileList=bink.c
+[Directories]
+Include=
+[C:\Users\du9ng\Desktop\PIC16F887\blink\bink]
+Type=4
+[mru-list]
+1=bink.c
+
+[ProjectLog]
+Days=2
+D1=27-09-2022
+D1_L=16
+D1_L1=[49194]Project Opened.
+D1_L2=[49218]Started Editing.
+D1_L3=[49787]Stopped Editing.
+TotalEdit=25
+TotalDebug=0
+D1_E=21
+D1_D=0
+D1_L4=[49993]Project Closed.
+D1_L5=[50011]Project Opened.
+D1_L6=[50074]Started Editing.
+D1_L7=[50366]Stopped Editing.
+D1_L8=[50366]Project Closed.
+D1_L9=[50505]Project Opened.
+D1_L10=[50516]Started Editing.
+D1_L11=[50843]Stopped Editing.
+D1_L12=[50843]Project Closed.
+D1_L13=[61106]Project Opened.
+D1_L14=[61215]Started Editing.
+D1_L15=[61761]Stopped Editing.
+D1_L16=[63397]Project Closed.
+D2=30-09-2022
+D2_L=8
+D2_L1=[29108]Project Opened.
+D2_L2=[29118]Started Editing.
+D2_L3=[29292]Stopped Editing.
+D2_E=4
+D2_D=0
+D2_L4=[29292]Project Closed.
+D2_L5=[49912]Project Opened.
+D2_L6=[49918]Started Editing.
+D2_L7=[49925]Stopped Editing.
+D2_L8=[49925]Project Closed.
+
+[Opened Files]
+1=bink.c
+2=
+[bink.c]
+Type=4
+[Units]
+Count=1
+1=bink (main)
