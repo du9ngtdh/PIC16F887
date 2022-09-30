@@ -37,12 +37,12 @@
 10D-10E @READ_PROGRAM_MEMORY8.P2
 
 ROM Allocation:
-000004  @WRITEBITA
-000024  ___send_bit_to_ic
-000063  ___send_byte_to_ic
-00007C  OUTPUT_to_4_74HC595
-00008F  ___upload_value_ic
-0000B9  @delay_ms1
+000004  @delay_ms1
+000018  @WRITEBITA
+000038  ___send_bit_to_ic
+000077  ___send_byte_to_ic
+000090  OUTPUT_to_4_74HC595
+0000A3  ___upload_value_ic
 0000CD  @cinit1
 0000CD  MAIN
 0000E5  @cinit2
@@ -51,12 +51,12 @@ Project Directory:
     C:\Users\du9ng\StudioProjects\PIC16F887\74HC595\
 
 Project Files:
-    main.c                                                  [30-Sep-22 16:48  CRC=51F78337]
+    main.c                                                  [30-Sep-22 19:31  CRC=D06B4543]
     main.h                                                  [30-Sep-22 14:54  CRC=64D0046D]
     ..\..\..\..\..\Program Files (x86)\PICC\Devices\16F887.h [18-Apr-14 16:56  CRC=42D047B0]
-    my_74hc595.h                                            [30-Sep-22 16:07  CRC=0A1EF1C0]
+    my_74hc595.h                                            [30-Sep-22 18:31  CRC=8332472F]
 
-Source signature=0DD5B2D4
+Source signature=7E701FBE
 
 Units:
     main (main)

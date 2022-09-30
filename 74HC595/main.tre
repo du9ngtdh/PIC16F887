@@ -1,6 +1,7 @@
 ÀÄmain
-   ÀÄMAIN  0/137  Ram=0
+   ÀÄMAIN  0/151  Ram=0
       ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄ@delay_ms1  0/20  Ram=1
       ÃÄOUTPUT_to_4_74HC595  0/61  Ram=4
       ³  ÃÄ___send_byte_to_ic  0/25  Ram=3
       ³  ³  ÃÄ___send_bit_to_ic  0/63  Ram=1
@@ -34,4 +35,7 @@
       ³  ÀÄ*
       ÃÄOUTPUT_to_4_74HC595  0/61  Ram=4
       ³  ÀÄ*
+      ÃÄ@delay_ms1  0/20  Ram=1
+      ÃÄ@delay_ms1  0/20  Ram=1
+      ÃÄ@delay_ms1  0/20  Ram=1
       ÀÄ@delay_ms1  0/20  Ram=1

@@ -1,8 +1,7 @@
-d G "INT_RB7" 2 766 "0x1800B08"
-D G "__PCM__" 0 76 ""5.025""
-D G "__DEVICE__" 0 76 "887"
-D G "__DATE__" 0 76 ""30-Sep-22""
-D G "__TIME__" 0 76 ""16:48:07"" "Standard Header file for the PIC16F887 device ////////////////"
+D G "__PCM__" 0 80 ""5.025""
+D G "__DEVICE__" 0 80 "887"
+D G "__DATE__" 0 80 ""30-Sep-22""
+D G "__TIME__" 0 80 ""19:31:58"" "Standard Header file for the PIC16F887 device ////////////////"
 c L "set_tris_a" 2 3 6 "FUNCTION"
 v L "value" 2 39 "int8" `54 
 f B "set_tris_a" 2 39 "void(int8 value)" `53 
@@ -874,13 +873,13 @@ C L "___send_byte_to_ic" 3 5 1 "FUNCTION"
 C L "___send_byte_to_ic" 3 5 1 "FUNCTION"
 C L "___send_byte_to_ic" 3 5 1 "FUNCTION"
 C L "OUTPUT_to_4_74HC595" 3 5 1 "FUNCTION"
-V L "value" 3 57 "int8" `636 
-V L "ic" 3 57 "int8" `637 
-F G "OUTPUT_to_4_74HC595" 3 58 "void(int8 value,int8 ic)" `635 
+V L "value" 3 50 "int8" `636 
+V L "ic" 3 50 "int8" `637 
+F G "OUTPUT_to_4_74HC595" 3 51 "void(int8 value,int8 ic)" `635 
 F G "MAIN" 0 5 "void()" `638 
-V L "LEDA" 0 8 "int8" `641 
-V L "LEDB" 0 9 "int8" `642 
-V L "mode" 0 10 "int8" `643 
+V L "LEDA" 0 7 "int8" `641 
+V L "LEDB" 0 8 "int8" `642 
+V L "mode" 0 9 "int8" `643 
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep_ulpwu" 1 0

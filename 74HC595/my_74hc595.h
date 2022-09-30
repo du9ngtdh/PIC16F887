@@ -37,19 +37,12 @@ void ___send_byte_to_ic(char value)
     for (int i = 0; i < 8; i++)
     {
         if (buffer % 2 == 0) // if buffer divided by 2 then send bit 0
-        {
             ___send_bit_to_ic(0);
-        }
         else // if buffer divisible by 2 then send bit 1
-        {
             ___send_bit_to_ic(1);
-        } 
-
         //after each loop, shift left buffer
         if (buffer != 0)
-        {
             buffer >>= 1;
-        }
     }
 }
 

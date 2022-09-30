@@ -1,8 +1,8 @@
-CCS PCM C Compiler, Version 5.025, 39025               30-Sep-22 16:48
+CCS PCM C Compiler, Version 5.025, 39025               30-Sep-22 19:31
 
                Filename:   C:\Users\du9ng\StudioProjects\PIC16F887\74HC595\main.lst
 
-               ROM used:   342 words (4%)
+               ROM used:   356 words (4%)
                            Largest free fragment is 2048
                RAM used:   12 (3%) at main() level
                            25 (7%) worst case
@@ -27,38 +27,39 @@ CCS PCM C Compiler, Version 5.025, 39025               30-Sep-22 16:48
 .................... //// form are not restricted in any way.                               //// 
 .................... /////////////////////////////////////////////////////////////////////////// 
 .................... #device PIC16F887 
-0004:  MOVF   30,W
-0005:  ANDLW  07
-0006:  MOVWF  77
-0007:  RRF    30,W
-0008:  MOVWF  78
-0009:  RRF    78,F
-000A:  RRF    78,F
-000B:  MOVLW  1F
-000C:  ANDWF  78,F
-000D:  MOVF   78,W
-000E:  ADDWF  32,W
-000F:  MOVWF  04
-0010:  BCF    03.7
-0011:  BTFSC  33.0
-0012:  BSF    03.7
-0013:  CLRF   78
-0014:  INCF   78,F
-0015:  INCF   77,F
-0016:  GOTO   018
-0017:  RLF    78,F
-0018:  DECFSZ 77,F
-0019:  GOTO   017
-001A:  MOVF   31,F
-001B:  BTFSC  03.2
-001C:  GOTO   020
-001D:  MOVF   78,W
-001E:  IORWF  00,F
-001F:  GOTO   023
-0020:  COMF   78,F
+*
+0018:  MOVF   30,W
+0019:  ANDLW  07
+001A:  MOVWF  77
+001B:  RRF    30,W
+001C:  MOVWF  78
+001D:  RRF    78,F
+001E:  RRF    78,F
+001F:  MOVLW  1F
+0020:  ANDWF  78,F
 0021:  MOVF   78,W
-0022:  ANDWF  00,F
-0023:  RETURN
+0022:  ADDWF  32,W
+0023:  MOVWF  04
+0024:  BCF    03.7
+0025:  BTFSC  33.0
+0026:  BSF    03.7
+0027:  CLRF   78
+0028:  INCF   78,F
+0029:  INCF   77,F
+002A:  GOTO   02C
+002B:  RLF    78,F
+002C:  DECFSZ 77,F
+002D:  GOTO   02B
+002E:  MOVF   31,F
+002F:  BTFSC  03.2
+0030:  GOTO   034
+0031:  MOVF   78,W
+0032:  IORWF  00,F
+0033:  GOTO   037
+0034:  COMF   78,F
+0035:  MOVF   78,W
+0036:  ANDWF  00,F
+0037:  RETURN
 ....................  
 .................... #list 
 ....................  
@@ -70,26 +71,26 @@ CCS PCM C Compiler, Version 5.025, 39025               30-Sep-22 16:48
 ....................  
 .................... #use delay(crystal=20000000) 
 *
-00B9:  MOVLW  2A
-00BA:  MOVWF  04
-00BB:  BCF    03.7
-00BC:  MOVF   00,W
-00BD:  BTFSC  03.2
-00BE:  GOTO   0CC
-00BF:  MOVLW  06
-00C0:  MOVWF  78
-00C1:  CLRF   77
-00C2:  DECFSZ 77,F
-00C3:  GOTO   0C2
-00C4:  DECFSZ 78,F
-00C5:  GOTO   0C1
-00C6:  MOVLW  7B
-00C7:  MOVWF  77
-00C8:  DECFSZ 77,F
-00C9:  GOTO   0C8
-00CA:  DECFSZ 00,F
-00CB:  GOTO   0BF
-00CC:  RETURN
+0004:  MOVLW  2A
+0005:  MOVWF  04
+0006:  BCF    03.7
+0007:  MOVF   00,W
+0008:  BTFSC  03.2
+0009:  GOTO   017
+000A:  MOVLW  06
+000B:  MOVWF  78
+000C:  CLRF   77
+000D:  DECFSZ 77,F
+000E:  GOTO   00D
+000F:  DECFSZ 78,F
+0010:  GOTO   00C
+0011:  MOVLW  7B
+0012:  MOVWF  77
+0013:  DECFSZ 77,F
+0014:  GOTO   013
+0015:  DECFSZ 00,F
+0016:  GOTO   00A
+0017:  RETURN
 ....................  
 ....................  
 .................... #include "my_74hc595.h" 
@@ -109,75 +110,75 @@ CCS PCM C Compiler, Version 5.025, 39025               30-Sep-22 16:48
 ....................     //write code send one bit to ic here 
 ....................     output_bit(send_74hc595_pin_data,value); 
 *
-0024:  MOVF   2F,F
-0025:  BTFSS  03.2
-0026:  GOTO   029
-0027:  MOVLW  00
-0028:  GOTO   02A
-0029:  MOVLW  01
-002A:  MOVWF  77
-002B:  MOVF   20,W
-002C:  MOVWF  30
-002D:  MOVF   77,W
-002E:  MOVWF  31
-002F:  CLRF   33
-0030:  CLRF   32
-0031:  CALL   004
-0032:  MOVF   20,W
-0033:  MOVWF  30
-0034:  CLRF   31
-0035:  CLRF   33
-0036:  MOVLW  80
-0037:  MOVWF  32
-0038:  CALL   004
+0038:  MOVF   2F,F
+0039:  BTFSS  03.2
+003A:  GOTO   03D
+003B:  MOVLW  00
+003C:  GOTO   03E
+003D:  MOVLW  01
+003E:  MOVWF  77
+003F:  MOVF   20,W
+0040:  MOVWF  30
+0041:  MOVF   77,W
+0042:  MOVWF  31
+0043:  CLRF   33
+0044:  CLRF   32
+0045:  CALL   018
+0046:  MOVF   20,W
+0047:  MOVWF  30
+0048:  CLRF   31
+0049:  CLRF   33
+004A:  MOVLW  80
+004B:  MOVWF  32
+004C:  CALL   018
 ....................     //delay_ms(1); 
 ....................     output_bit(ck_74hc595_pin,1); 
-0039:  MOVF   21,W
-003A:  MOVWF  30
-003B:  MOVLW  01
-003C:  MOVWF  31
-003D:  CLRF   33
-003E:  CLRF   32
-003F:  CALL   004
-0040:  MOVF   21,W
-0041:  MOVWF  30
-0042:  CLRF   31
-0043:  CLRF   33
-0044:  MOVLW  80
-0045:  MOVWF  32
-0046:  CALL   004
-....................     //delay_ms(1); 
-....................     output_bit(ck_74hc595_pin,0); 
-0047:  MOVF   21,W
-0048:  MOVWF  30
-0049:  CLRF   31
-004A:  CLRF   33
-004B:  CLRF   32
-004C:  CALL   004
 004D:  MOVF   21,W
 004E:  MOVWF  30
-004F:  CLRF   31
-0050:  CLRF   33
-0051:  MOVLW  80
-0052:  MOVWF  32
-0053:  CALL   004
-....................     //delay_ms(1); 
-....................     output_bit(ck_74hc595_pin,1); 
+004F:  MOVLW  01
+0050:  MOVWF  31
+0051:  CLRF   33
+0052:  CLRF   32
+0053:  CALL   018
 0054:  MOVF   21,W
 0055:  MOVWF  30
-0056:  MOVLW  01
-0057:  MOVWF  31
-0058:  CLRF   33
-0059:  CLRF   32
-005A:  CALL   004
+0056:  CLRF   31
+0057:  CLRF   33
+0058:  MOVLW  80
+0059:  MOVWF  32
+005A:  CALL   018
+....................     //delay_ms(1); 
+....................     output_bit(ck_74hc595_pin,0); 
 005B:  MOVF   21,W
 005C:  MOVWF  30
 005D:  CLRF   31
 005E:  CLRF   33
-005F:  MOVLW  80
-0060:  MOVWF  32
-0061:  CALL   004
-0062:  RETURN
+005F:  CLRF   32
+0060:  CALL   018
+0061:  MOVF   21,W
+0062:  MOVWF  30
+0063:  CLRF   31
+0064:  CLRF   33
+0065:  MOVLW  80
+0066:  MOVWF  32
+0067:  CALL   018
+....................     //delay_ms(1); 
+....................     output_bit(ck_74hc595_pin,1); 
+0068:  MOVF   21,W
+0069:  MOVWF  30
+006A:  MOVLW  01
+006B:  MOVWF  31
+006C:  CLRF   33
+006D:  CLRF   32
+006E:  CALL   018
+006F:  MOVF   21,W
+0070:  MOVWF  30
+0071:  CLRF   31
+0072:  CLRF   33
+0073:  MOVLW  80
+0074:  MOVWF  32
+0075:  CALL   018
+0076:  RETURN
 ....................      
 .................... } 
 ....................  
@@ -187,141 +188,133 @@ CCS PCM C Compiler, Version 5.025, 39025               30-Sep-22 16:48
 ....................     //write code upload value to ic here 
 ....................     output_bit(update_74hc595,1); 
 *
-008F:  MOVF   22,W
-0090:  MOVWF  30
-0091:  MOVLW  01
-0092:  MOVWF  31
-0093:  CLRF   33
-0094:  CLRF   32
-0095:  CALL   004
-0096:  MOVF   22,W
-0097:  MOVWF  30
-0098:  CLRF   31
-0099:  CLRF   33
-009A:  MOVLW  80
-009B:  MOVWF  32
-009C:  CALL   004
-....................     //delay_ms(1); 
-....................     output_bit(update_74hc595,0); 
-009D:  MOVF   22,W
-009E:  MOVWF  30
-009F:  CLRF   31
-00A0:  CLRF   33
-00A1:  CLRF   32
-00A2:  CALL   004
 00A3:  MOVF   22,W
 00A4:  MOVWF  30
-00A5:  CLRF   31
-00A6:  CLRF   33
-00A7:  MOVLW  80
-00A8:  MOVWF  32
-00A9:  CALL   004
-....................     //delay_ms(1); 
-....................     output_bit(update_74hc595,1); 
+00A5:  MOVLW  01
+00A6:  MOVWF  31
+00A7:  CLRF   33
+00A8:  CLRF   32
+00A9:  CALL   018
 00AA:  MOVF   22,W
 00AB:  MOVWF  30
-00AC:  MOVLW  01
-00AD:  MOVWF  31
-00AE:  CLRF   33
-00AF:  CLRF   32
-00B0:  CALL   004
+00AC:  CLRF   31
+00AD:  CLRF   33
+00AE:  MOVLW  80
+00AF:  MOVWF  32
+00B0:  CALL   018
+....................     //delay_ms(1); 
+....................     output_bit(update_74hc595,0); 
 00B1:  MOVF   22,W
 00B2:  MOVWF  30
 00B3:  CLRF   31
 00B4:  CLRF   33
-00B5:  MOVLW  80
-00B6:  MOVWF  32
-00B7:  CALL   004
+00B5:  CLRF   32
+00B6:  CALL   018
+00B7:  MOVF   22,W
+00B8:  MOVWF  30
+00B9:  CLRF   31
+00BA:  CLRF   33
+00BB:  MOVLW  80
+00BC:  MOVWF  32
+00BD:  CALL   018
+....................     //delay_ms(1); 
+....................     output_bit(update_74hc595,1); 
+00BE:  MOVF   22,W
+00BF:  MOVWF  30
+00C0:  MOVLW  01
+00C1:  MOVWF  31
+00C2:  CLRF   33
+00C3:  CLRF   32
+00C4:  CALL   018
+00C5:  MOVF   22,W
+00C6:  MOVWF  30
+00C7:  CLRF   31
+00C8:  CLRF   33
+00C9:  MOVLW  80
+00CA:  MOVWF  32
+00CB:  CALL   018
 ....................    
 .................... } 
 .................... // this function send 1byte to ic 
 .................... void ___send_byte_to_ic(char value) 
 *
-0063:  MOVF   2C,W
-0064:  MOVWF  2D
+0077:  MOVF   2C,W
+0078:  MOVWF  2D
 .................... { 
 ....................     //create a variable to store the value 
 ....................     char buffer = value; 
 ....................  
 ....................     //this loop runs eight times to send eight bit data 
 ....................     for (int i = 0; i < 8; i++) 
-0065:  CLRF   2E
-0066:  MOVF   2E,W
-0067:  SUBLW  07
-0068:  BTFSS  03.0
-0069:  GOTO   07B
+0079:  CLRF   2E
+007A:  MOVF   2E,W
+007B:  SUBLW  07
+007C:  BTFSS  03.0
+007D:  GOTO   08F
 ....................     { 
 ....................         if (buffer % 2 == 0) // if buffer divided by 2 then send bit 0 
-006A:  MOVF   2D,W
-006B:  ANDLW  01
-006C:  BTFSS  03.2
-006D:  GOTO   071
-....................         { 
+007E:  MOVF   2D,W
+007F:  ANDLW  01
+0080:  BTFSS  03.2
+0081:  GOTO   085
 ....................             ___send_bit_to_ic(0); 
-006E:  CLRF   2F
-006F:  CALL   024
-....................         } 
-0070:  GOTO   074
+0082:  CLRF   2F
+0083:  CALL   038
+0084:  GOTO   088
 ....................         else // if buffer divisible by 2 then send bit 1 
-....................         { 
 ....................             ___send_bit_to_ic(1); 
-0071:  MOVLW  01
-0072:  MOVWF  2F
-0073:  CALL   024
-....................         }  
-....................  
+0085:  MOVLW  01
+0086:  MOVWF  2F
+0087:  CALL   038
 ....................         //after each loop, shift left buffer 
 ....................         if (buffer != 0) 
-0074:  MOVF   2D,F
-0075:  BTFSC  03.2
-0076:  GOTO   079
-....................         { 
+0088:  MOVF   2D,F
+0089:  BTFSC  03.2
+008A:  GOTO   08D
 ....................             buffer >>= 1; 
-0077:  BCF    03.0
-0078:  RRF    2D,F
-....................         } 
-0079:  INCF   2E,F
-007A:  GOTO   066
+008B:  BCF    03.0
+008C:  RRF    2D,F
+008D:  INCF   2E,F
+008E:  GOTO   07A
 ....................     } 
-007B:  RETURN
+008F:  RETURN
 .................... } 
 ....................  
 .................... // this function send 1 byte to one for the four ic 
 .................... void OUTPUT_to_4_74HC595(int8 value,int8 ic) 
 .................... { 
 ....................      ___ic_value[ic-1] = value; 
-007C:  MOVLW  01
-007D:  SUBWF  2B,W
-007E:  ADDLW  23
-007F:  MOVWF  04
-0080:  BCF    03.7
-0081:  MOVF   2A,W
-0082:  MOVWF  00
+0090:  MOVLW  01
+0091:  SUBWF  2B,W
+0092:  ADDLW  23
+0093:  MOVWF  04
+0094:  BCF    03.7
+0095:  MOVF   2A,W
+0096:  MOVWF  00
 ....................        
 ....................      ___send_byte_to_ic(___ic_value[3]); 
-0083:  MOVF   26,W
-0084:  MOVWF  2C
-0085:  CALL   063
+0097:  MOVF   26,W
+0098:  MOVWF  2C
+0099:  CALL   077
 ....................      ___send_byte_to_ic(___ic_value[2]); 
-0086:  MOVF   25,W
-0087:  MOVWF  2C
-0088:  CALL   063
+009A:  MOVF   25,W
+009B:  MOVWF  2C
+009C:  CALL   077
 ....................      ___send_byte_to_ic(___ic_value[1]); 
-0089:  MOVF   24,W
-008A:  MOVWF  2C
-008B:  CALL   063
+009D:  MOVF   24,W
+009E:  MOVWF  2C
+009F:  CALL   077
 ....................      ___send_byte_to_ic(___ic_value[0]); 
-008C:  MOVF   23,W
-008D:  MOVWF  2C
-008E:  CALL   063
+00A0:  MOVF   23,W
+00A1:  MOVWF  2C
+00A2:  CALL   077
 ....................      ___upload_value_ic(); 
 *
-00B8:  RETURN
+00CC:  RETURN
 .................... } 
 ....................  
 ....................  
 .................... void main() 
-*
 00CD:  MOVF   03,W
 00CE:  ANDLW  1F
 00CF:  MOVWF  03
@@ -347,8 +340,7 @@ CCS PCM C Compiler, Version 5.025, 39025               30-Sep-22 16:48
 00E3:  CLRF   08
 00E4:  CLRF   09
 00E5:  BCF    03.7
-.................... { 
-....................     
+.................... {  
 ....................    set_tris_d(~0x07); 
 *
 00EB:  MOVLW  F8
@@ -365,43 +357,44 @@ CCS PCM C Compiler, Version 5.025, 39025               30-Sep-22 16:48
 ....................  
 ....................    while(TRUE) 
 ....................    { 
-....................       OUTPUT_to_4_74HC595(LEDA,1); 
-00F3:  MOVF   27,W
+....................       delay_ms(100); 
+00F3:  MOVLW  64
 00F4:  MOVWF  2A
-00F5:  MOVLW  01
-00F6:  MOVWF  2B
-00F7:  CALL   07C
+00F5:  CALL   004
+....................       OUTPUT_to_4_74HC595(LEDA,1); 
+00F6:  MOVF   27,W
+00F7:  MOVWF  2A
+00F8:  MOVLW  01
+00F9:  MOVWF  2B
+00FA:  CALL   090
 ....................       OUTPUT_to_4_74HC595(LEDB,2); 
-00F8:  MOVF   28,W
-00F9:  MOVWF  2A
-00FA:  MOVLW  02
-00FB:  MOVWF  2B
-00FC:  CALL   07C
+00FB:  MOVF   28,W
+00FC:  MOVWF  2A
+00FD:  MOVLW  02
+00FE:  MOVWF  2B
+00FF:  CALL   090
 ....................       delay_ms(100); 
-00FD:  MOVLW  64
-00FE:  MOVWF  2A
-00FF:  CALL   0B9
-....................       OUTPUT_to_4_74HC595(LEDA,1);     
-0100:  MOVF   27,W
+0100:  MOVLW  64
 0101:  MOVWF  2A
-0102:  MOVLW  01
-0103:  MOVWF  2B
-0104:  CALL   07C
+0102:  CALL   004
+....................       OUTPUT_to_4_74HC595(LEDA,1);     
+0103:  MOVF   27,W
+0104:  MOVWF  2A
+0105:  MOVLW  01
+0106:  MOVWF  2B
+0107:  CALL   090
 ....................       OUTPUT_to_4_74HC595(LEDB,2);  
-0105:  MOVF   28,W
-0106:  MOVWF  2A
-0107:  MOVLW  02
-0108:  MOVWF  2B
-0109:  CALL   07C
-....................       delay_ms(100); 
-010A:  MOVLW  64
-010B:  MOVWF  2A
-010C:  CALL   0B9
+0108:  MOVF   28,W
+0109:  MOVWF  2A
+010A:  MOVLW  02
+010B:  MOVWF  2B
+010C:  CALL   090
+....................        
 ....................        
 ....................       if(mode == 0) 
 010D:  MOVF   29,F
 010E:  BTFSS  03.2
-010F:  GOTO   11E
+010F:  GOTO   121
 ....................       { 
 ....................       LEDA>>=1; 
 0110:  BCF    03.0
@@ -413,117 +406,135 @@ CCS PCM C Compiler, Version 5.025, 39025               30-Sep-22 16:48
 0114:  MOVF   28,W
 0115:  SUBWF  27,W
 0116:  BTFSS  03.2
-0117:  GOTO   11D
+0117:  GOTO   120
 0118:  MOVF   28,F
 0119:  BTFSS  03.2
-011A:  GOTO   11D
+011A:  GOTO   120
 ....................          { 
 ....................             mode = 1; 
 011B:  MOVLW  01
 011C:  MOVWF  29
+....................             delay_ms(100); 
+011D:  MOVLW  64
+011E:  MOVWF  2A
+011F:  CALL   004
 ....................          } 
 ....................       } 
-011D:  GOTO   130
+0120:  GOTO   162
 ....................       else if(mode == 1) 
-011E:  DECFSZ 29,W
-011F:  GOTO   130
+0121:  DECFSZ 29,W
+0122:  GOTO   137
 ....................       { 
 ....................          LEDA = ~LEDA; 
-0120:  COMF   27,F
+0123:  COMF   27,F
 ....................          LEDB = ~LEDB; 
-0121:  COMF   28,F
+0124:  COMF   28,F
 ....................          LEDA<<=1; 
-0122:  BCF    03.0
-0123:  RLF    27,F
+0125:  BCF    03.0
+0126:  RLF    27,F
 ....................          LEDB>>=1; 
-0124:  BCF    03.0
-0125:  RRF    28,F
+0127:  BCF    03.0
+0128:  RRF    28,F
 ....................          LEDA = ~LEDA; 
-0126:  COMF   27,F
+0129:  COMF   27,F
 ....................          LEDB = ~LEDB; 
-0127:  COMF   28,F
+012A:  COMF   28,F
 ....................          if(LEDA == LEDB&& LEDB == 0xff) 
-0128:  MOVF   28,W
-0129:  SUBWF  27,W
-012A:  BTFSS  03.2
-012B:  GOTO   130
-012C:  INCFSZ 28,W
-012D:  GOTO   130
+012B:  MOVF   28,W
+012C:  SUBWF  27,W
+012D:  BTFSS  03.2
+012E:  GOTO   136
+012F:  INCFSZ 28,W
+0130:  GOTO   136
 ....................           { 
 ....................              mode = 2; 
-012E:  MOVLW  02
-012F:  MOVWF  29
+0131:  MOVLW  02
+0132:  MOVWF  29
+....................              delay_ms(100); 
+0133:  MOVLW  64
+0134:  MOVWF  2A
+0135:  CALL   004
 ....................           } 
 ....................       } 
+0136:  GOTO   162
 ....................        
-....................       if(mode == 2) 
-0130:  MOVF   29,W
-0131:  SUBLW  02
-0132:  BTFSS  03.2
-0133:  GOTO   141
+....................      else if(mode == 2) 
+0137:  MOVF   29,W
+0138:  SUBLW  02
+0139:  BTFSS  03.2
+013A:  GOTO   14C
 ....................       { 
 ....................       LEDA<<=1; 
-0134:  BCF    03.0
-0135:  RLF    27,F
+013B:  BCF    03.0
+013C:  RLF    27,F
 ....................       LEDB>>=1; 
-0136:  BCF    03.0
-0137:  RRF    28,F
+013D:  BCF    03.0
+013E:  RRF    28,F
 ....................       if(LEDA == LEDB&& LEDB == 0) 
-0138:  MOVF   28,W
-0139:  SUBWF  27,W
-013A:  BTFSS  03.2
-013B:  GOTO   141
-013C:  MOVF   28,F
-013D:  BTFSS  03.2
-013E:  GOTO   141
+013F:  MOVF   28,W
+0140:  SUBWF  27,W
+0141:  BTFSS  03.2
+0142:  GOTO   14B
+0143:  MOVF   28,F
+0144:  BTFSS  03.2
+0145:  GOTO   14B
 ....................          { 
 ....................             mode = 3; 
-013F:  MOVLW  03
-0140:  MOVWF  29
+0146:  MOVLW  03
+0147:  MOVWF  29
+....................             delay_ms(100); 
+0148:  MOVLW  64
+0149:  MOVWF  2A
+014A:  CALL   004
 ....................          } 
 ....................       } 
-....................       if(mode == 3) 
-0141:  MOVF   29,W
-0142:  SUBLW  03
-0143:  BTFSS  03.2
-0144:  GOTO   154
+014B:  GOTO   162
+....................     else  if(mode == 3) 
+014C:  MOVF   29,W
+014D:  SUBLW  03
+014E:  BTFSS  03.2
+014F:  GOTO   162
 ....................       { 
 ....................        
 ....................          LEDA = ~LEDA; 
-0145:  COMF   27,F
+0150:  COMF   27,F
 ....................          LEDB = ~LEDB; 
-0146:  COMF   28,F
+0151:  COMF   28,F
 ....................          LEDA>>=1; 
-0147:  BCF    03.0
-0148:  RRF    27,F
+0152:  BCF    03.0
+0153:  RRF    27,F
 ....................          LEDB<<=1; 
-0149:  BCF    03.0
-014A:  RLF    28,F
+0154:  BCF    03.0
+0155:  RLF    28,F
 ....................          LEDA = ~LEDA; 
-014B:  COMF   27,F
+0156:  COMF   27,F
 ....................          LEDB = ~LEDB; 
-014C:  COMF   28,F
+0157:  COMF   28,F
 ....................        
 ....................       if(LEDA == LEDB&& LEDB == 0xff) 
-014D:  MOVF   28,W
-014E:  SUBWF  27,W
-014F:  BTFSS  03.2
-0150:  GOTO   154
-0151:  INCFSZ 28,W
-0152:  GOTO   154
+0158:  MOVF   28,W
+0159:  SUBWF  27,W
+015A:  BTFSS  03.2
+015B:  GOTO   162
+015C:  INCFSZ 28,W
+015D:  GOTO   162
 ....................          { 
 ....................             mode = 0; 
-0153:  CLRF   29
+015E:  CLRF   29
+....................             delay_ms(100); 
+015F:  MOVLW  64
+0160:  MOVWF  2A
+0161:  CALL   004
 ....................          } 
 ....................       } 
-0154:  GOTO   0F3
+0162:  GOTO   0F3
 ....................        
 ....................     } 
 ....................        
 ....................        
 ....................    } 
 ....................  
-0155:  SLEEP
+0163:  SLEEP
 ....................  
 
 Configuration Fuses:

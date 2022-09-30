@@ -43,7 +43,7 @@ void main()
           }
       }
       
-     else if(mode == 2)
+      if(mode == 2)
       {
       LEDA<<=1;
       LEDB>>=1;
@@ -53,7 +53,7 @@ void main()
             delay_ms(100);
          }
       }
-    else  if(mode == 3)
+      if(mode == 3)
       {
       
          LEDA = ~LEDA;

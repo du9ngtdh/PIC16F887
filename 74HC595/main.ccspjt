@@ -16,7 +16,7 @@ Type=4
 [ProjectLog]
 Days=1
 D1=30-09-2022
-D1_L=13
+D1_L=25
 D1_L1=[53689]Project Opened.
 D1_L2=[53791]Started Editing.
 D1_L3=[54255]Stopped Editing.
@@ -29,15 +29,27 @@ D1_L9=[56536]Started Editing.
 D1_L10=[58683]Stopped Editing.
 D1_L11=[59217]Started Editing.
 D1_L12=[60601]Stopped Editing.
-TotalEdit=67
+TotalEdit=70
 TotalDebug=0
-D1_E=67
+D1_E=70
 D1_D=0
 D1_L13=[60601]Project Closed.
+D1_L14=[67720]Project Opened.
+D1_L15=[67726]Project Closed.
+D1_L16=[67731]Project Opened.
+D1_L17=[67739]Project Closed.
+D1_L18=[67823]Project Opened.
+D1_L19=[67829]Project Closed.
+D1_L20=[68126]Project Opened.
+D1_L21=[68140]Project Closed.
+D1_L22=[70159]Project Opened.
+D1_L23=[70198]Started Editing.
+D1_L24=[70355]Stopped Editing.
+D1_L25=[70355]Project Closed.
 
 [Opened Files]
 1=main.c
-2=my_74hc595.h
+2=
 3=main.h
 4=
 [main.c]

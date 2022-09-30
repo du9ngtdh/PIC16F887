@@ -25,7 +25,6 @@ void main()
       if(LEDA == LEDB&& LEDB == 0)
          {
             mode = 1;
-            delay_ms(100);
          }
       }
       else if(mode == 1)
@@ -39,21 +38,19 @@ void main()
          if(LEDA == LEDB&& LEDB == 0xff)
           {
              mode = 2;
-             delay_ms(100);
           }
       }
       
-     else if(mode == 2)
+      if(mode == 2)
       {
       LEDA<<=1;
       LEDB>>=1;
       if(LEDA == LEDB&& LEDB == 0)
          {
             mode = 3;
-            delay_ms(100);
          }
       }
-    else  if(mode == 3)
+      if(mode == 3)
       {
       
          LEDA = ~LEDA;
@@ -66,7 +63,6 @@ void main()
       if(LEDA == LEDB&& LEDB == 0xff)
          {
             mode = 0;
-            delay_ms(100);
          }
       }
       
