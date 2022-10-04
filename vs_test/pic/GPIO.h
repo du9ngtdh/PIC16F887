@@ -7,12 +7,7 @@
 void ___output( char value)
 {
     for (int i = 7; i >= 0; i--)
-    {
-        if ((value >> i)%2 != 0)
-            printf("1");
-        else
-            printf("0");
-    }
+        printf("%d",((value >> i)%2 != 0));
     printf("\n");
 }
 void output_a(char value)
