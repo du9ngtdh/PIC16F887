@@ -1,41 +1,40 @@
 ÀÄmain
-   ÀÄMAIN  0/151  Ram=0
+   ÀÄMAIN  0/40  Ram=0
       ÃÄ@cinit1  (Inline)  Ram=0
-      ÃÄ@delay_ms1  0/20  Ram=1
-      ÃÄOUTPUT_to_4_74HC595  0/61  Ram=4
-      ³  ÃÄ___send_byte_to_ic  0/25  Ram=3
-      ³  ³  ÃÄ___send_bit_to_ic  0/63  Ram=1
-      ³  ³  ³  ÃÄ@WRITEBITA  0/32  Ram=6
-      ³  ³  ³  ÃÄ@WRITEBITA  0/32  Ram=6
-      ³  ³  ³  ÃÄ@WRITEBITA  0/32  Ram=6
-      ³  ³  ³  ÃÄ@WRITEBITA  0/32  Ram=6
-      ³  ³  ³  ÃÄ@WRITEBITA  0/32  Ram=6
-      ³  ³  ³  ÃÄ@WRITEBITA  0/32  Ram=6
-      ³  ³  ³  ÃÄ@WRITEBITA  0/32  Ram=6
-      ³  ³  ³  ÀÄ@WRITEBITA  0/32  Ram=6
-      ³  ³  ÀÄ___send_bit_to_ic  0/63  Ram=1
-      ³  ³     ÀÄ*
-      ³  ÃÄ___send_byte_to_ic  0/25  Ram=3
-      ³  ³  ÀÄ*
-      ³  ÃÄ___send_byte_to_ic  0/25  Ram=3
-      ³  ³  ÀÄ*
-      ³  ÃÄ___send_byte_to_ic  0/25  Ram=3
-      ³  ³  ÀÄ*
-      ³  ÀÄ___upload_value_ic  (Inline)  Ram=0
-      ³     ÃÄ@WRITEBITA  0/32  Ram=6
-      ³     ÃÄ@WRITEBITA  0/32  Ram=6
-      ³     ÃÄ@WRITEBITA  0/32  Ram=6
-      ³     ÃÄ@WRITEBITA  0/32  Ram=6
-      ³     ÃÄ@WRITEBITA  0/32  Ram=6
-      ³     ÀÄ@WRITEBITA  0/32  Ram=6
-      ÃÄOUTPUT_to_4_74HC595  0/61  Ram=4
-      ³  ÀÄ*
-      ÃÄ@delay_ms1  0/20  Ram=1
-      ÃÄOUTPUT_to_4_74HC595  0/61  Ram=4
-      ³  ÀÄ*
-      ÃÄOUTPUT_to_4_74HC595  0/61  Ram=4
-      ³  ÀÄ*
-      ÃÄ@delay_ms1  0/20  Ram=1
-      ÃÄ@delay_ms1  0/20  Ram=1
-      ÃÄ@delay_ms1  0/20  Ram=1
-      ÀÄ@delay_ms1  0/20  Ram=1
+      ÀÄloop_logic  0/71  Ram=1
+         ÃÄ@delay_ms1  (Inline)  Ram=1
+         ÃÄOUTPUT_to_2_74HC595  (Inline)  Ram=2
+         ³  ÃÄ___send_byte_to_ic  0/43  Ram=2
+         ³  ³  ÃÄ@WRITEBITA  0/32  Ram=6
+         ³  ³  ÃÄ@WRITEBITA  0/32  Ram=6
+         ³  ³  ÀÄ___send_ck  0/28  Ram=1
+         ³  ³     ÃÄ@WRITEBITA  0/32  Ram=6
+         ³  ³     ÃÄ@WRITEBITA  0/32  Ram=6
+         ³  ³     ÃÄ@WRITEBITA  0/32  Ram=6
+         ³  ³     ÀÄ@WRITEBITA  0/32  Ram=6
+         ³  ÃÄ___send_byte_to_ic  0/43  Ram=2
+         ³  ³  ÀÄ*
+         ³  ÀÄ___send_ck  0/28  Ram=1
+         ³     ÀÄ*
+         ÃÄ@goto10632  0/8  Ram=0
+         ÃÄmode_0  (Inline)  Ram=0
+         ³  ÃÄ_dich_in  0/5  Ram=0
+         ³  ÀÄ_set_mode  0/11  Ram=2
+         ÃÄmode_1  (Inline)  Ram=0
+         ³  ÃÄ_dao_2byte  0/9  Ram=0
+         ³  ³  ÃÄ_dao_byte  0/16  Ram=5
+         ³  ³  ÀÄ_dao_byte  0/16  Ram=5
+         ³  ÃÄ_dich_out  0/5  Ram=0
+         ³  ÃÄ_dao_2byte  0/9  Ram=0
+         ³  ³  ÀÄ*
+         ³  ÀÄ_set_mode  0/11  Ram=2
+         ÃÄmode_2  (Inline)  Ram=0
+         ³  ÃÄ_dich_out  0/5  Ram=0
+         ³  ÀÄ_set_mode  0/11  Ram=2
+         ÀÄmode_3  (Inline)  Ram=0
+            ÃÄ_dao_2byte  0/9  Ram=0
+            ³  ÀÄ*
+            ÃÄ_dich_in  0/5  Ram=0
+            ÃÄ_dao_2byte  0/9  Ram=0
+            ³  ÀÄ*
+            ÀÄ_set_mode  0/11  Ram=2

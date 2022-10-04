@@ -1,0 +1,72 @@
+[PROJECT]
+Target=main.hex
+Processor_Text=PIC16F887
+CCSVerions=5.025
+Compiler=PCM
+CCSVersion=5.025
+[Target Data]
+FileList=main.c
+[Directories]
+Include=
+[C:\Users\du9ng\StudioProjects\PIC16F887\led_sang_dan\main]
+Type=4
+[mru-list]
+1=main.c
+
+[ProjectLog]
+Days=1
+D1=04-10-2022
+D1_L=40
+D1_L1=[26101]Project Opened.
+D1_L2=[26105]Started Editing.
+D1_L3=[26405]Stopped Editing.
+D1_L4=[26884]Started Editing.
+D1_L5=[27869]Stopped Editing.
+D1_L6=[27999]Started Editing.
+D1_L7=[29150]Stopped Editing.
+D1_L8=[29586]Started Editing.
+D1_L9=[30298]Stopped Editing.
+D1_L10=[30534]Started Editing.
+D1_L11=[33740]Stopped Editing.
+D1_L12=[33828]Started Editing.
+D1_L13=[34522]Stopped Editing.
+D1_L14=[36052]Started Editing.
+D1_L15=[36447]Stopped Editing.
+TotalEdit=186
+TotalDebug=0
+D1_E=186
+D1_D=0
+D1_L16=[36840]Project Closed.
+D1_L17=[37641]Project Opened.
+D1_L18=[37848]Started Editing.
+D1_L19=[39848]Stopped Editing.
+D1_L20=[40438]Started Editing.
+D1_L21=[40495]Stopped Editing.
+D1_L22=[40495]Project Closed.
+D1_L23=[41008]Project Opened.
+D1_L24=[41017]Started Editing.
+D1_L25=[41764]Stopped Editing.
+D1_L26=[41764]Project Closed.
+D1_L27=[45608]Project Opened.
+D1_L28=[45653]Started Editing.
+D1_L29=[47027]Stopped Editing.
+D1_L30=[47027]Project Closed.
+D1_L31=[47203]Project Opened.
+D1_L32=[47400]Started Editing.
+D1_L33=[49085]Stopped Editing.
+D1_L34=[49085]Project Closed.
+D1_L35=[62852]Project Opened.
+D1_L36=[63261]Project Closed.
+D1_L37=[63490]Project Opened.
+D1_L38=[63502]Started Editing.
+D1_L39=[63824]Stopped Editing.
+D1_L40=[64426]Project Closed.
+
+[Opened Files]
+1=main.c
+2=
+[main.c]
+Type=4
+[Units]
+Count=1
+1=main (main)

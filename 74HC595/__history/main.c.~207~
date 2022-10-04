@@ -1,0 +1,20 @@
+#include <main.h>
+#include "my_logic.h"
+
+int x = 0;
+void test(int *y){
+  return y;
+}
+
+void main()
+{
+    x =  test(5);
+
+   set_tris_d(~0x07);
+   while(TRUE)
+   {  
+      loop_logic(40);
+    }//while
+ }//main
+
+

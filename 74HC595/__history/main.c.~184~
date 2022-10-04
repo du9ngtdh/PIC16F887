@@ -1,0 +1,16 @@
+#include <main.h>
+#include "my_logic.h"
+
+
+void main()
+{
+   set_tris_d(~0x07);
+   while(TRUE)
+   {
+      delay_ms(40);
+      
+      loop_logic();
+    }//while
+ }//main
+
+

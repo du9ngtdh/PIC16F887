@@ -1,0 +1,172 @@
+#include <main.h>
+int16 delay = 200,i;
+void out_d(char value)
+{
+      output_d(value);
+      delay_ms(delay);
+}
+void out_b(char value)
+{
+      output_b(value);
+      delay_ms(delay);
+}
+char shilf_lelf(char value)
+{
+   return (char)(value<<1)+1;
+}
+char shilf_rigth(char value,int1 bit)
+{
+   return (value>>1)+bit?0x80:0;
+}
+
+//sang dan 8 bit
+void bai_1(){
+   char data = 0;
+   //sang dan
+   for ( i = 0; i<8; i++)
+   {
+      data = shilf_lelf(data,1);
+      out_d(data);
+   }
+   //tat dan
+   for ( i  = 0; i <8; i ++)
+   {
+     // data = (data>>1);
+     // output_d(data);
+     // delay_ms(delay);
+   }
+}//bai 1
+
+// sang dan 8 bit
+void bai_2(){
+   char data = 0;
+   delay_ms(delay);
+   //sang dan
+   for ( i = 0; i<8; i++)
+   {
+      data = (data>>1)+128;
+      output_d(data);
+      delay_ms(delay);
+   }
+   //tat dan
+   for ( i = 0; i<8; i++)
+   {
+      data = (data<<1);
+      output_d(data);
+      delay_ms(delay);
+   }
+   
+}//bai 2
+
+// sang dan 16 bit
+void bai_3(){
+   int16 data = 0;
+  
+   // sang dan
+    for ( i = 0; i<16; i++)
+   {
+      data = (data << 1)+1;
+      output_d(data);
+      output_b(data>>8);
+      delay_ms(delay);
+   }
+   //tat dan
+  for ( i = 0; i<16; i++)
+   {
+      data = (data >> 1);
+      output_d(data);
+      output_b(data>>8);
+      delay_ms(delay);
+   }
+}//bai 3
+
+// sang dan 16 bit
+void bai_4(){
+  
+    int16 data = 0;
+  
+   // sang dan
+    for ( i = 0; i<16; i++)
+   {
+      data = (data >> 1)+0x8000;
+      output_d(data);
+      output_b(data>>8);
+      delay_ms(delay);
+   }
+   // tat dan
+  for ( i = 0; i<16; i++)
+   {
+      data = (data << 1);
+      output_d(data);
+      output_b(data>>8);
+      delay_ms(delay);
+   }
+
+}//bai 4
+
+// sang vao sang ra
+void bai_5(){
+char data1 = 0, data2 = 0;
+//on in
+for(i = 0; i<8; i++)
+{
+   data1 = (data1>>1)+128;
+   data2 = (data2<<1)+1;
+   output_b(data1);
+   output_d(data2);
+   delay_ms(delay);
+}
+//off out
+for(i = 0; i<8; i++)
+{
+   data2 = (data2>>1);
+   data1 = (data1<<1);
+   output_b(data1);
+   output_d(data2);
+   delay_ms(delay);
+}
+}
+
+//chay 1 led 16 bit
+void bai_6(){
+   int16 data = 1;
+   for(i = 0; i<16;i++)
+   {
+      data = (data<<1);
+      output_d(data);
+      output_b(data>>8);
+      delay_ms(delay);
+   }
+   data = 0x8000;
+    for(i = 0; i<16;i++)
+   {
+      data = (data>>1);
+      output_d(data);
+      output_b(data>>8);
+      delay_ms(delay);
+   }
+
+}
+
+
+void main()
+{
+  
+   set_tris_d(0x00);
+   set_tris_b(0x00);
+   set_tris_c(0x00);
+   output_b(0x00);
+   output_d(0x00);
+   
+   while(TRUE)
+   {
+ 
+     bai_1();
+     //bai_2();
+    // bai_3();
+    // bai_4();
+    // bai_5();
+    // bai_6();
+   }
+
+}

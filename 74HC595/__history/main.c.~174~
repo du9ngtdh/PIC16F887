@@ -1,0 +1,29 @@
+#include <main.h>
+#include "my_logic.h"
+
+void test()
+{
+output_bit(pin_a0,1);
+}
+void main()
+{
+
+ 
+
+   set_tris_d(~0x07);
+  
+
+   while(TRUE)
+   {
+      delay_ms(40);
+      OUTPUT_to_2_74HC595(LEDA,LEDB);
+      loop_logic();
+      
+      test();
+      
+    }//while
+      
+      
+ }//main
+
+

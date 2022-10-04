@@ -1,0 +1,93 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020-021 delay
+022-023 i
+024     @TRIS_C
+025     bai_2.data
+025     bai_1.data
+025-026 bai_3.data
+025-026 bai_6.data
+025     bai_5.data1
+025-026 bai_4.data
+026     shilf_lelf.value
+026     out_d.value
+026     shilf_rigth.value
+026     bai_5.data2
+027     shilf_lelf.bit
+027     shilf_rigth.bit
+027     out_d.@SCRATCH1
+027     bai_3.@SCRATCH1
+027     bai_4.@SCRATCH1
+027     bai_5.@SCRATCH1
+027     bai_6.@SCRATCH1
+028     @delay_ms1.P1
+028     shilf_rigth._bit
+028     shilf_lelf.@SCRATCH1
+028     bai_3.@SCRATCH2
+028     bai_4.@SCRATCH2
+028     bai_6.@SCRATCH2
+029     shilf_rigth.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  shilf_lelf
+000009  @delay_ms1
+00001D  out_d
+000030  shilf_rigth
+00003A  bai_1
+00006B  bai_2
+00009C  bai_3
+0000FA  bai_4
+000155  bai_5
+0001AE  bai_6
+000207  @cinit1
+000207  MAIN
+00021E  @cinit2
+
+Project Directory:
+    C:\Users\du9ng\StudioProjects\PIC16F887\led_sang_dan\
+
+Project Files:
+    main.c                                                  [04-Oct-22 17:38  CRC=65DC390F]
+    main.h                                                  [04-Oct-22 07:15  CRC=64D0046D]
+    ..\..\..\..\..\Program Files (x86)\PICC\Devices\16F887.h [18-Apr-14 16:56  CRC=42D047B0]
+
+Source signature=504CCCDC
+
+Units:
+    main (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-65535
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   main.xsym
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX8:       main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.ccspjt
+    Call Tree:   main.tre
+    Statistics:  main.STA

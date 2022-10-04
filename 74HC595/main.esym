@@ -1,7 +1,7 @@
-D G "__PCM__" 0 80 ""5.025""
-D G "__DEVICE__" 0 80 "887"
-D G "__DATE__" 0 80 ""30-Sep-22""
-D G "__TIME__" 0 80 ""19:31:58"" "Standard Header file for the PIC16F887 device ////////////////"
+D G "__PCM__" 0 0 ""5.025""
+D G "__DEVICE__" 0 0 ""
+D G "__DATE__" 0 0 ""04-Oct-22""
+D G "__TIME__" 0 0 ""13:38:34"" "Standard Header file for the PIC16F887 device ////////////////"
 c L "set_tris_a" 2 3 6 "FUNCTION"
 v L "value" 2 39 "int8" `54 
 f B "set_tris_a" 2 39 "void(int8 value)" `53 
@@ -849,37 +849,37 @@ d G "INT_RB4" 2 763 "0x1100B08"
 d G "INT_RB5" 2 764 "0x1200B08"
 d G "INT_RB6" 2 765 "0x1400B08"
 d G "INT_RB7" 2 766 "0x1800B08"
-V G "send_74hc595_pin_data" 3 1 "int8" `620 
-V G "ck_74hc595_pin" 3 2 "int8" `621 
-V G "update_74hc595" 3 3 "int8" `622 
-V G "___ic_value" 3 4 "int8[4]" `623 
-C L "jump_to_isr" 3 5 1 "FUNCTION"
-V L "value" 3 6 "int8" `625 
-F G "___send_bit_to_ic" 3 7 "void(int8 value)" `624  "write code send one bit to ic here"
-C L "___send_bit_to_ic" 3 5 1 "FUNCTION"
-C L "___send_bit_to_ic" 3 5 1 "FUNCTION"
-C L "___send_bit_to_ic" 3 5 1 "FUNCTION"
-C L "___upload_value_ic" 3 5 1 "FUNCTION"
-F G "___upload_value_ic" 3 21 "void()" `630  "write code upload value to ic here"
-C L "___upload_value_ic" 3 5 1 "FUNCTION"
-C L "___upload_value_ic" 3 5 1 "FUNCTION"
-C L "___send_byte_to_ic" 3 5 1 "FUNCTION"
-V L "value" 3 31 "int8" `632 
-F G "___send_byte_to_ic" 3 32 "void(int8 value)" `631  "create a variable to store the value"
-V L "buffer" 3 34 "int8" `633 
-C L "___send_byte_to_ic" 3 5 1 "FUNCTION"
-V L "i" 3 37 "int8" `634 
-C L "___send_byte_to_ic" 3 5 1 "FUNCTION"
-C L "___send_byte_to_ic" 3 5 1 "FUNCTION"
-C L "___send_byte_to_ic" 3 5 1 "FUNCTION"
-C L "OUTPUT_to_4_74HC595" 3 5 1 "FUNCTION"
-V L "value" 3 50 "int8" `636 
-V L "ic" 3 50 "int8" `637 
-F G "OUTPUT_to_4_74HC595" 3 51 "void(int8 value,int8 ic)" `635 
-F G "MAIN" 0 5 "void()" `638 
-V L "LEDA" 0 7 "int8" `641 
-V L "LEDB" 0 8 "int8" `642 
-V L "mode" 0 9 "int8" `643 
+V G "_pin_data" 4 2 "int8" `620 
+V G "_pin_ck" 4 3 "int8" `621 
+V G "_pic_chot" 4 4 "int8" `622 
+V L "pin" 4 5 "int8" `624 
+F G "___send_ck" 4 6 "void(int8 pin)" `623 
+C L "___send_byte_to_ic" 4 10 1 "FUNCTION"
+V L "value" 4 11 "int8" `630 
+F G "___send_byte_to_ic" 4 12 "void(int8 value)" `629 
+V L "i" 4 13 "int8" `631 
+C L "OUTPUT_to_2_74HC595" 4 10 1 "FUNCTION"
+V L "value" 4 21 "int8" `633 
+V L "value2" 4 21 "int8" `634 
+F G "OUTPUT_to_2_74HC595" 4 22 "void(int8 value,int8 value2)" `632 
+T G "sLogic" 3 8 "{int8 ic_1,int8 ic_2,int8 mode}" `639 
+V G "logic" 3 9 "sLogic" `640 
+V L "value" 3 12 "*int8" `642 
+F G "_dao_byte" 3 13 "void(*int8 value)" `641 
+F G "_dao_2byte" 3 17 "void()" `643 
+F G "_dich_in" 3 22 "void()" `644 
+F G "_dich_out" 3 27 "void()" `645 
+V L "dk" 3 31 "int8" `647 
+V L "number_mode" 3 31 "int8" `648 
+F G "_set_mode" 3 32 "void(int8 dk,int8 number_mode)" `646 
+F G "mode_0" 3 35 "void()" `649 
+F G "mode_1" 3 40 "void()" `650 
+F G "mode_2" 3 47 "void()" `651 
+F G "mode_3" 3 51 "void()" `652 
+V L "x" 3 59 "int8" `654 
+F G "loop_logic" 3 59 "void(int8 x)" `653 
+C L "loop_logic" 3 76 1 "FUNCTION"
+F G "MAIN" 0 6 "void()" `656 
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep_ulpwu" 1 0

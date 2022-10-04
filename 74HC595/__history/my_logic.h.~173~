@@ -1,0 +1,83 @@
+#include "my_74hc595.h"
+
+typedef struct 
+{
+    int ic_1;
+    int ic_2;
+    int mode;
+} sLogic;
+ sLogic logic  = {0xff,0xff,0};
+
+
+void _dao_byte(char* value)
+{
+*value = ~*value;
+}
+void _dao_2byte()
+{
+  _dao_byte(&logic.ic_1);
+  _dao_byte(&logic.ic_2);
+}
+void _dich_in()
+{
+      logic.ic_1>>=1;
+      logic.ic_2<<=1;
+}
+void _dich_out()
+{
+         logic.ic_1<<=1;
+         logic.ic_2>>=1;
+}
+void _set_mode(int8 dk,  int number_mode)
+{
+   if(logic.ic_1 ==logic.ic_2 && logic.ic_2 == dk) logic.mode = number_mode;
+}
+void mode_0(){
+      _dich_in();
+      _set_mode(0, 1);
+}
+
+void mode_1(){
+         _dao_2byte();
+         _dich_out();
+         _dao_2byte();
+         _set_mode(0xff,2);
+}
+
+void mode_2(){
+        _dich_out();
+         _set_mode( 0,3);
+}
+void mode_3(){
+         _dao_2byte();
+         _dich_in();
+         _dao_2byte();  
+      _set_mode(0xff,0);
+}
+
+
+void loop_logic(int x){
+    // delay_ms(x);
+    OUTPUT_to_2_74HC595(logic.ic_1,logic.ic_2);
+    switch(logic.mode)
+      {
+      case 0:
+         mode_0();
+         break;
+      case 1:
+         mode_1();
+         break;
+      case 2:
+         mode_2();
+         break;
+      case 3:
+         mode_3();
+         break;
+      }//switch
+   }
+
+
+
+
+
+

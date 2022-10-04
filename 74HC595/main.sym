@@ -1,31 +1,32 @@
 004-005 @READ_PROGRAM_MEMORY8.P1
 004-005 @WRITE_PROGRAM_MEMORY8.P2
-015     CCP_1
 015     CCP_1_LOW
+015     CCP_1
 016     CCP_1_HIGH
 01B     CCP_2_LOW
 01B     CCP_2
 01C     CCP_2_HIGH
-020     send_74hc595_pin_data
-021     ck_74hc595_pin
-022     update_74hc595
-023-026 ___ic_value
-027     MAIN.LEDA
-028     MAIN.LEDB
-029     MAIN.mode
-02A     @delay_ms1.P1
-02A     OUTPUT_to_4_74HC595.value
-02B     OUTPUT_to_4_74HC595.ic
-02C     ___send_byte_to_ic.value
-02C     OUTPUT_to_4_74HC595.@SCRATCH1
-02D     ___send_byte_to_ic.buffer
-02D     OUTPUT_to_4_74HC595.@SCRATCH2
-02E     ___send_byte_to_ic.i
-02F     ___send_bit_to_ic.value
-02F     ___send_byte_to_ic.@SCRATCH1
-030     @WRITEBITA.P1
-031     @WRITEBITA.P1
-032-033 @WRITEBITA.P1
+020     _pin_data
+021     _pin_ck
+022     _pic_chot
+023-025 logic
+026     loop_logic.x
+027     @delay_ms1.P1
+027     _set_mode.dk
+027-028 _dao_byte.value
+027     OUTPUT_to_2_74HC595.value
+028     OUTPUT_to_2_74HC595.value2
+028     _set_mode.number_mode
+029     ___send_byte_to_ic.value
+029     _dao_byte.@SCRATCH1
+02A     ___send_byte_to_ic.i
+02A     _dao_byte.@SCRATCH2
+02B     ___send_ck.pin
+02B     ___send_byte_to_ic.@SCRATCH1
+02B     _dao_byte.@SCRATCH3
+02C     @WRITEBITA.P1
+02D     @WRITEBITA.P1
+02E-02F @WRITEBITA.P1
 077     @SCRATCH
 078     @SCRATCH
 078     _RETURN_
@@ -33,30 +34,41 @@
 07A     @SCRATCH
 107.6   C1OUT
 108.6   C2OUT
-10D-10E @WRITE_PROGRAM_MEMORY8.P1
-10D-10E @READ_PROGRAM_MEMORY8.P2
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
 
 ROM Allocation:
-000004  @delay_ms1
-000018  @WRITEBITA
-000038  ___send_bit_to_ic
-000077  ___send_byte_to_ic
-000090  OUTPUT_to_4_74HC595
-0000A3  ___upload_value_ic
-0000CD  @cinit1
-0000CD  MAIN
-0000E5  @cinit2
+000004  @WRITEBITA
+000024  ___send_ck
+000040  ___send_byte_to_ic
+00006B  _dich_in
+000070  _set_mode
+00007B  _dao_byte
+00008B  _dao_2byte
+000094  _dich_out
+000099  loop_logic
+00009B  @delay_ms1
+0000B2  OUTPUT_to_2_74HC595
+0000C1  mode_0
+0000C7  mode_1
+0000D0  mode_2
+0000D6  mode_3
+0000E0  @goto10632
+0000E8  MAIN
+0000E8  @cinit1
+000100  @cinit2
 
 Project Directory:
     C:\Users\du9ng\StudioProjects\PIC16F887\74HC595\
 
 Project Files:
-    main.c                                                  [30-Sep-22 19:31  CRC=D06B4543]
+    main.c                                                  [03-Oct-22 12:11  CRC=D872A938]
     main.h                                                  [30-Sep-22 14:54  CRC=64D0046D]
     ..\..\..\..\..\Program Files (x86)\PICC\Devices\16F887.h [18-Apr-14 16:56  CRC=42D047B0]
-    my_74hc595.h                                            [30-Sep-22 18:31  CRC=8332472F]
+    my_logic.h                                              [02-Oct-22 12:24  CRC=68703178]
+    my_74hc595.h                                            [02-Oct-22 07:46  CRC=DD98ABF8]
 
-Source signature=7E701FBE
+Source signature=A3B47EBD
 
 Units:
     main (main)
