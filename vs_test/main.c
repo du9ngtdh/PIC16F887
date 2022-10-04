@@ -13,6 +13,7 @@ int main()
         data = ~data;
         output_a(data);
     }
+    
 
     debug_end();
 }
