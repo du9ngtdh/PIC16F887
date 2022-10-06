@@ -13,26 +13,31 @@ void ___output( char value)
 void output_a(char value)
 {
     printf("PORT_A = ", value);
+    PORT_A = value;
     ___output(value);
 }
 void output_b(char value)
 {
     printf("PORT_B = ", value);
+    PORT_B = value;
     ___output(value);
 }
 void output_c(char value)
 {
     printf("PORT_C = ", value);
+    PORT_C = value;
     ___output(value);
 }
 void output_d(char value)
 {
     printf("PORT_D = ", value);
+    PORT_D = value;
     ___output(value);
 }
 void output_e(char value)
 {
     printf("PORTE = ", value);
+    PORT_E = value;
     ___output(value);
 }
 
@@ -124,8 +129,31 @@ void SET_TRIS_E(char value)
 //================================================================
 void output_bit(char* pin, int bit)
 {
+    if(__getport(pin) == 'A')
+    {
+        PORT_A = set_bit(PORT_A, bit,__getpin(pin));
+    }
+     if(__getport(pin) == 'B')
+    {
+        PORT_B = set_bit(PORT_B, bit,__getpin(pin));
+    }
+     if(__getport(pin) == 'C')
+    {
+        PORT_C = set_bit(PORT_C, bit,__getpin(pin
+        ));
+    }
+     if(__getport(pin) == 'D')
+    {
+        PORT_D = set_bit(PORT_D, bit,__getpin(pin));
+    }
+     if(__getport(pin) == 'E')
+    {
+        printf("Error = %d:%d", bit, __getpin(pin) );
+        PORT_E = set_bit(PORT_E, bit,__getpin(pin));
+    }
     printf("%s = %d\n", pin,bit);
 }
+
 void OUTPUT_BIT(char* pin, int bit)
 {
     output_bit(pin, bit);

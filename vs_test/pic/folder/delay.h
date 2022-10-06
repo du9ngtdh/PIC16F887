@@ -1,5 +1,51 @@
 #pragma once
 #include <stdio.h>
+int equal(char *a, char *b)
+{
+    printf("%c",a[4]);
+    printf("\n%c",b[4]);
+}
+char __getport(char *a)
+{
+    return a[4];
+}
+int __getpin(char *a)
+{
+    int data = -1;
+    switch(a[5])
+    {
+        case '0':
+        data = 0;
+        break;
+        case '1':
+        data = 1;
+        break;
+        case '2':
+        data = 2;
+        break;
+        case '3':
+        data = 3;
+        break;
+        case '4':
+        data = 4;
+        break;
+        case '5':
+        data = 5;
+        break;
+        case '6':
+        data = 6;
+        break;
+        case '7':
+        data = 7;
+        break;
+        
+    }
+    return data;
+
+}
+
+
+
 
 #define PIN_A0  "PIN_A0"
 #define PIN_A1  "PIN_A1"

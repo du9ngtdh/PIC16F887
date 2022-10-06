@@ -1,19 +1,14 @@
-#include "main.h"
 
+#include "pic/16f886.h"
 
 int main()
 {
-    unsigned char data = 0x0f;
-
-
-
-    // while(1)
+    debug_start();
+    //while (1)
     {
-        output_a(data);
-        data = ~data;
-        output_a(data);
+        output_a(0x01);
+        input(PIN_A0);
     }
-    
 
     debug_end();
 }
